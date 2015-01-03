@@ -1,47 +1,24 @@
 package g.pher.interactivestory;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
 
 
-public class MainActivity extends Activity {
-
-    private EditText mNameField;
-    private Button mStartButton;
+public class StoryActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        mNameField = (EditText)findViewById(R.id.nameEditText);
-        mStartButton = (Button)findViewById(R.id.startButton);
-
-        mStartButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String name = mNameField.getText().toString();
-                startStory();
-            }
-        });
-
+        setContentView(R.layout.activity_story);
     }
 
-    private void startStory(){
-        Intent intent = new Intent(this, StoryActivity.class);
-        startActivity(intent);
-    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.menu_story, menu);
         return true;
     }
 
