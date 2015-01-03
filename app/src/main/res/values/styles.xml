@@ -5,4 +5,9 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <style name="WhiteButton">
+        <item name="android:background">#FFFFFFFF</item>
+        <item name="android:textColor">#ff3a8aec</item>
+    </style>
+
 </resources>
