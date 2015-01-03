@@ -18,8 +18,8 @@ public class StoryActivity extends Activity {
         setContentView(R.layout.activity_story);
 
         Intent intent = getIntent();
-        String name = intent.getStringExtra("name");
-        if(name == null)
+        String name = intent.getStringExtra(getString(R.string.key_name));
+        if(name == null || name.equalsIgnoreCase(""))
         {
             name = "Fernando";
         }
